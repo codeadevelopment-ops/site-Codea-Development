@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Codea — Portfolio</title>
+  <meta name="description" content="Portfolio — exemples de sites réalisés par Codea" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <div class="brand">
+        <a href="index.html" class="logo">CODEA</a>
+        <span class="tagline">Sites web pour associations & petites entreprises</span>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link">Accueil</a></li>
+        <li role="none"><a role="menuitem" href="a-propos.html" class="nav-link">À propos</a></li>
+        <li role="none"><a role="menuitem" href="services.html" class="nav-link">Services</a></li>
+        <li role="none"><a role="menuitem" href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li role="none"><a role="menuitem" href="avis.html" class="nav-link">Avis</a></li>
+        <li role="none"><a role="menuitem" href="contact.html" class="nav-link btn-outline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Portfolio</h1>
+        <p class="muted">Sélection de projets récents — clic pour voir le détail.</p>
+
+        <div class="portfolio-grid">
+          <!-- Projet 1 -->
+          <article class="portfolio-item card">
+            <img src="https://picsum.photos/820/480?seed=pf1" alt="Projet Club sportif">
+            <div class="figcap">
+              <h3>Club sportif — Réservation & calendrier</h3>
+              <p>Site complet avec calendrier d'événements, galerie et formulaire d'inscription.</p>
+              <a href="#" class="link">Voir le site (démo)</a>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="portfolio-item card">
+            <img src="https://picsum.photos/820/480?seed=pf2" alt="Projet Association">
+            <div class="figcap">
+              <h3>Association culturelle — Billetterie</h3>
+              <p>Billetterie simple, page d'actualités et intégration newsletter.</p>
+              <a href="#" class="link">Voir le site (démo)</a>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="portfolio-item card">
+            <img src="https://picsum.photos/820/480?seed=pf3" alt="Projet Artisan">
+            <div class="figcap">
+              <h3>Artisan — Catalogue & contact</h3>
+              <p>Catalogue produit, galerie et prise de contact simplifiée.</p>
+              <a href="#" class="link">Voir le site (démo)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>CODEA</strong></div>
+      <div class="muted small">Mentions légales • Politique de confidentialité</div>
+      <div>© <span id="year"></span> CODEA</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Codea — Contact</title>
+  <meta name="description" content="Contact — demande de devis et informations" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- header -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <div class="brand">
+        <a href="index.html" class="logo">CODEA</a>
+        <span class="tagline">Sites web pour associations & petites entreprises</span>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link">Accueil</a></li>
+        <li role="none"><a role="menuitem" href="a-propos.html" class="nav-link">À propos</a></li>
+        <li role="none"><a role="menuitem" href="services.html" class="nav-link">Services</a></li>
+        <li role="none"><a role="menuitem" href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li role="none"><a role="menuitem" href="avis.html" class="nav-link">Avis</a></li>
+        <li role="none"><a role="menuitem" href="contact.html" class="nav-link btn-outline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container content-grid">
+        <div class="contact-card card">
+          <h1>Contactez-nous</h1>
+          <p class="muted">Dites-nous en quelques lignes votre projet — nous revenons rapidement.</p>
+
+          <form id="contact-form" class="form-card" aria-label="Formulaire de contact">
+            <label><input type="text" id="contact-nom" placeholder="Votre nom" required></label>
+            <label><input type="email" id="contact-email" placeholder="Votre email" required></label>
+            <label><textarea id="contact-message" rows="6" placeholder="Description du projet" required></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Envoyer</button>
+            </div>
+            <p id="contact-info" class="muted small"></p>
+          </form>
+        </div>
+
+        <aside class="contact-info card">
+          <h3>Nous joindre</h3>
+          <p><strong>Email :</strong> <a href="mailto:contact@codea.fr">contact@codea.fr</a></p>
+          <p><strong>Téléphone :</strong> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
+          <p><strong>Local :</strong> [Votre ville]</p>
+          <h4>Réseaux</h4>
+          <p class="socials">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a><br>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>CODEA</strong></div>
+      <div class="muted small">Mentions légales • Politique de confidentialité</div>
+      <div>© <span id="year"></span> CODEA</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

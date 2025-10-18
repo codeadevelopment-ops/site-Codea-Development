@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Codea — Accueil</title>
+  <meta name="description" content="Codea — Création de sites web pour associations & petites entreprises" />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- header (shared) -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <div class="brand">
+        <a href="index.html" class="logo">CODEA</a>
+        <span class="tagline">Sites web pour associations & petites entreprises</span>
+      </div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul id="nav-links" class="nav-links" role="menu">
+        <li role="none"><a role="menuitem" href="index.html" class="nav-link">Accueil</a></li>
+        <li role="none"><a role="menuitem" href="a-propos.html" class="nav-link">À propos</a></li>
+        <li role="none"><a role="menuitem" href="services.html" class="nav-link">Services</a></li>
+        <li role="none"><a role="menuitem" href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li role="none"><a role="menuitem" href="avis.html" class="nav-link">Avis</a></li>
+        <li role="none"><a role="menuitem" href="contact.html" class="nav-link btn-outline">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="accueil" class="hero section">
+      <div class="container content">
+        <div class="hero-text">
+          <h1>Des sites web propres, rapides et adaptés à votre activité</h1>
+          <p>Chez <strong>CODEA</strong>, nous concevons des sites accessibles, performants et faciles à gérer — parfaits pour associations, clubs et petites entreprises.</p>
+          <div class="hero-cta">
+            <a href="portfolio.html" class="btn">Voir le portfolio</a>
+            <a href="contact.html" class="btn btn-outline">Demander un devis</a>
+          </div>
+          <ul class="features">
+            <li><i class="fas fa-check-circle"></i> Design responsive & accessible</li>
+            <li><i class="fas fa-check-circle"></i> Hébergement & maintenance</li>
+            <li><i class="fas fa-check-circle"></i> Formation & autonomie</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <img src="https://picsum.photos/640/420?seed=codea-hero" alt="Illustration - création site web">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services preview -->
+    <section id="services-preview" class="section">
+      <div class="container">
+        <h2 class="section-title">Nos services</h2>
+        <p class="muted center">Solutions adaptées et abordables — de la page vitrine au petit e-commerce.</p>
+
+        <div class="services-grid">
+          <article class="service card">
+            <i class="fas fa-desktop service-ico" aria-hidden="true"></i>
+            <h3>Site vitrine</h3>
+            <p>Présentez votre structure avec un site clair, rapide et optimisé pour mobiles.</p>
+            <a href="services.html" class="link">En savoir plus →</a>
+          </article>
+
+          <article class="service card">
+            <i class="fas fa-shopping-cart service-ico" aria-hidden="true"></i>
+            <h3>Petit e-commerce</h3>
+            <p>Une boutique simple pour vendre localement, sécurisée et facile à administrer.</p>
+            <a href="services.html" class="link">En savoir plus →</a>
+          </article>
+
+          <article class="service card">
+            <i class="fas fa-mobile-alt service-ico" aria-hidden="true"></i>
+            <h3>Accessibilité</h3>
+            <p>Sites conformes aux bonnes pratiques pour tous les publics (contraste, navigation clavier, etc.).</p>
+            <a href="services.html" class="link">En savoir plus →</a>
+          </article>
+
+          <article class="service card">
+            <i class="fas fa-life-ring service-ico" aria-hidden="true"></i>
+            <h3>Maintenance</h3>
+            <p>Suivi, sauvegardes et mises à jour pour garder votre site sécurisé et à jour.</p>
+            <a href="services.html" class="link">En savoir plus →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio preview -->
+    <section id="portfolio-preview" class="section">
+      <div class="container">
+        <h2 class="section-title">Exemples de projets</h2>
+        <p class="muted center">Quelques sites réalisés pour des associations et artisans locaux.</p>
+
+        <div class="portfolio-grid">
+          <figure class="portfolio-item card">
+            <img src="https://picsum.photos/520/320?seed=proj1" alt="Site Club Sportif">
+            <figcaption>
+              <h4>Club Sportif Local</h4>
+              <p>Module d'inscription aux événements et calendrier.</p>
+              <a href="portfolio.html" class="link">Voir le projet →</a>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item card">
+            <img src="https://picsum.photos/520/320?seed=proj2" alt="Site Association culturelle">
+            <figcaption>
+              <h4>Association culturelle</h4>
+              <p>Actualités, billetterie et newsletter.</p>
+              <a href="portfolio.html" class="link">Voir le projet →</a>
+            </figcaption>
+          </figure>
+
+          <figure class="portfolio-item card">
+            <img src="https://picsum.photos/520/320?seed=proj3" alt="Site Artisan">
+            <figcaption>
+              <h4>Artisan Local</h4>
+              <p>Galerie produits et formulaire de contact.</p>
+              <a href="portfolio.html" class="link">Voir le projet →</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials preview -->
+    <section id="avis-preview" class="section">
+      <div class="container">
+        <h2 class="section-title">Ils nous recommandent</h2>
+        <div class="avis-list">
+          <div class="avis card">
+            <p class="texte">"Codea a transformé notre présence web. Livraison rapide et super communication."</p>
+            <div class="auteur">
+              <img src="https://i.pravatar.cc/60?img=32" alt="Avatar">
+              <div>
+                <h4>Claire</h4>
+                <p class="muted small">Présidente — Association Locale</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="avis card">
+            <p class="texte">"Site simple à gérer — nos adhérents trouvent rapidement les infos."</p>
+            <div class="auteur">
+              <img src="https://i.pravatar.cc/60?img=12" alt="Avatar">
+              <div>
+                <h4>Marc</h4>
+                <p class="muted small">Gérant — Boulangerie</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center" style="margin-top:1rem"><a href="avis.html" class="link">Lire tous les avis →</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer (shared) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>CODEA</strong> — Création de sites web<br>
+        SIRET : <span class="muted">à renseigner</span>
+      </div>
+      <div class="muted small">Mentions légales • Politique de confidentialité</div>
+      <div>© <span id="year"></span> CODEA</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
