@@ -184,5 +184,14 @@ document.querySelectorAll(".email-link").forEach(el => {
 document.querySelectorAll(".email-text").forEach(el => {
   el.textContent = EMAIL;
 });
+// --------------------
+// Email global CODEA
+// --------------------
+document.querySelectorAll('.email-link').forEach(el => {
+  el.href = 'mailto:codea.development@gmail.com';
+  el.textContent = 'codea.development@gmail.com';
+});
+
+
 
 
