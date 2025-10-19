@@ -57,7 +57,8 @@
 
         <aside class="contact-info card">
           <h3>Nous joindre</h3>
-          <p><strong>Email :</strong> <a href="mailto:contact@codea.fr">contact@codea.fr</a></p>
+          <!-- On remplace le mail direct par la classe email-link -->
+          <p><strong>Email :</strong> <a class="email-link"></a></p>
           <p><strong>Téléphone :</strong> <a href="tel:+33000000000">+33 0 00 00 00 00</a></p>
           <p><strong>Local :</strong> [Votre ville]</p>
           <h4>Réseaux</h4>
@@ -72,7 +73,12 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><strong>CODEA</strong></div>
+      <div>
+        <strong>CODEA</strong> — Création de sites web<br>
+        <i class="fas fa-envelope"></i>
+        <!-- On garde la même classe ici -->
+        <a class="email-link"></a>
+      </div>
       <div class="muted small">Mentions légales • Politique de confidentialité</div>
       <div>© <span id="year"></span> CODEA</div>
     </div>
@@ -81,4 +87,5 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
