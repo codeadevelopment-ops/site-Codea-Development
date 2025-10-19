@@ -1,6 +1,8 @@
 // script.js - menu mobile, reveal, forms, avis (localStorage), date footer
 
-// Mobile menu toggle
+// -------------------------------
+// Menu mobile
+// -------------------------------
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
@@ -13,7 +15,7 @@ if (menuToggle) {
   });
 }
 
-// Close mobile menu when clicking an internal link
+// Fermer le menu sur clic d’un lien
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => {
     if (window.innerWidth <= 700 && navLinks) {
@@ -23,7 +25,9 @@ document.querySelectorAll('.nav-links a').forEach(a => {
   });
 });
 
-// Smooth scroll for same-page anchors (if any)
+// -------------------------------
+// Défilement fluide
+// -------------------------------
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
@@ -34,7 +38,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// IntersectionObserver reveal animations
+// -------------------------------
+// Animation "reveal" au scroll
+// -------------------------------
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -46,12 +52,15 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Footer year
-document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+// -------------------------------
+// Année dynamique dans le footer
+// -------------------------------
+const yearSpan = document.getElementById('year');
+if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-// ----------------------------------
-// Avis (shared logic, saved in localStorage)
-// ----------------------------------
+// -------------------------------
+// Gestion des avis (localStorage)
+// -------------------------------
 const AVIS_KEY = 'codea_avis_vitrine';
 
 function getAvis() {
@@ -64,7 +73,9 @@ function getAvis() {
 function saveAvis(list) { localStorage.setItem(AVIS_KEY, JSON.stringify(list)); }
 
 function escapeHTML(str = '') {
-  return String(str).replace(/[&<>"']/g, function(m){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]); });
+  return String(str).replace(/[&<>"']/g, m => (
+    { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m]
+  ));
 }
 
 function renderAvisList() {
@@ -89,7 +100,7 @@ function renderAvisList() {
   `).join('');
 }
 
-// Prepopulate demo if empty
+// Avis par défaut
 (function initDefaultAvis(){
   const cur = getAvis();
   if (cur.length === 0) {
@@ -103,6 +114,7 @@ function renderAvisList() {
   renderAvisList();
 })();
 
+// Ajout d’un avis
 const avisForm = document.getElementById('avis-form');
 if (avisForm) {
   avisForm.addEventListener('submit', function(e){
@@ -136,7 +148,9 @@ if (clearAvisBtn) {
   });
 }
 
-// Contact form simple UX (no backend)
+// -------------------------------
+// Formulaire de contact (sans backend)
+// -------------------------------
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e){
@@ -149,9 +163,26 @@ if (contactForm) {
       info && (info.textContent = 'Veuillez remplir tous les champs.');
       return;
     }
-    // replace with real submission (server or form service) in production
     info && (info.textContent = 'Merci ! Votre message a bien été pris en compte — nous vous répondrons rapidement.');
     this.reset();
     setTimeout(()=> info && (info.textContent = ''), 6000);
   });
 }
+
+// -------------------------------
+// Email global (affiché partout)
+// -------------------------------
+const EMAIL = "codea.development@gmail.com";
+
+// Remplace tous les liens mailto dynamiques
+document.querySelectorAll(".email-link").forEach(el => {
+  el.href = `mailto:${EMAIL}`;
+  el.textContent = EMAIL;
+});
+
+// Pour les éléments texte sans lien
+document.querySelectorAll(".email-text").forEach(el => {
+  el.textContent = EMAIL;
+});
+
+
