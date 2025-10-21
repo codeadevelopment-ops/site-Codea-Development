@@ -12,6 +12,24 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="script.js" defer></script>
+
+  <style>
+    /* 🌐 Style ajouté pour que l’image s’adapte bien sur tous les écrans */
+    .about-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Ajustement mobile */
+    @media (max-width: 600px) {
+      .about-image {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -58,7 +76,10 @@
 
         <aside aria-hidden="true">
           <div class="card">
-            <img src="https://picsum.photos/420/300?seed=team" alt="Équipe Codea" style="width:100%;border-radius:8px;margin-bottom:0.8rem">
+            <img 
+              src="https://i.pinimg.com/736x/86/79/33/86793384942824663d5a879f39e97a77.jpg" 
+              alt="Équipe Codea" 
+              class="about-image">
             <h4>Notre équipe</h4>
             <p>Deux développeurs full-stack — design, intégration, backend léger. Nous nous adaptons à vos besoins et budget.</p>
             <a href="contact.html" class="btn">Nous contacter</a>
@@ -94,5 +115,6 @@
   <script src="script.js" defer></script>
 </body>
 </html>
+
 
 
